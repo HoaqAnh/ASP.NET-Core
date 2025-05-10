@@ -1,12 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "A:\\User\\Data\\Lab\\ASP.NET-Core\\TranPhamHoangAnh_Week02\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{046FF7E3-A642-420D-B162-04A5D9CCF2EF}|TranPhamHoangAnh_Week02\\TranPhamHoangAnh_Week02.csproj|d:\\user\\data\\asp.net-core\\tranphamhoanganh_week02\\tranphamhoanganh_week02\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{046FF7E3-A642-420D-B162-04A5D9CCF2EF}|TranPhamHoangAnh_Week02\\TranPhamHoangAnh_Week02.csproj|solutionrelative:tranphamhoanganh_week02\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week02\\TranPhamHoangAnh_Week02\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TranPhamHoangAnh_Week02\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week02\\TranPhamHoangAnh_Week02\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TranPhamHoangAnh_Week02\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAjwF4BAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T19:07:50.145Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,50 @@
+/* _content/TranPhamHoangAnh_Week02/Views/Shared/_Layout.cshtml.rz.scp.css */
+a.navbar-brand[b-4io9b75o16] {
+    display: flex;
+    width: 100vh;
+    height: 10vh;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a[b-4io9b75o16] {
+  color: #0077cc;
+}
+
+.btn-primary[b-4io9b75o16] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-4io9b75o16], .nav-pills .show > .nav-link[b-4io9b75o16] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-4io9b75o16] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-4io9b75o16] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-4io9b75o16] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-4io9b75o16] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.nav-container[b-4io9b75o16] {
+
+}
+
+.footer-container[b-4io9b75o16] {
+    width: 100%;
+    height: fit-content;
+}

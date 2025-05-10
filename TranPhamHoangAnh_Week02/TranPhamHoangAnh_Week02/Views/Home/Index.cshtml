@@ -1,8 +1,487 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Hero Section with Carousel -->
+<section class="hero-section">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="overlay-image" style="background-image: url('/api/placeholder/1200/600')"></div>
+                <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                    <div>
+                        <h1 class="display-3 fw-bold text-white">Thế Giới Sách Online</h1>
+                        <p class="lead">Khám phá thế giới qua từng trang sách</p>
+                        <a asp-controller="Books" asp-action="ListBooks" class="btn btn-primary btn-lg mt-3">
+                            <i class="fas fa-book-open me-2"></i>Xem Thư Viện
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url('/api/placeholder/1200/600')"></div>
+                <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                    <div>
+                        <h1 class="display-3 fw-bold text-white">Sách Mới Mỗi Ngày</h1>
+                        <p class="lead">Cập nhật liên tục những đầu sách hot nhất</p>
+                        <a href="#featured-books" class="btn btn-success btn-lg mt-3">
+                            <i class="fas fa-fire me-2"></i>Sách Nổi Bật
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url('/api/placeholder/1200/600')"></div>
+                <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                    <div>
+                        <h1 class="display-3 fw-bold text-white">Quản Lý Thư Viện Dễ Dàng</h1>
+                        <p class="lead">Hệ thống hiện đại, thân thiện người dùng</p>
+                        <a href="#contact" class="btn btn-warning btn-lg mt-3">
+                            <i class="fas fa-envelope me-2"></i>Liên Hệ Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="welcome-section py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://i.pinimg.com/736x/dd/bf/38/ddbf38f2067578c9da22378a83eaddb3.jpg" alt="Library Image" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-6">
+                <div class="p-4 bg-white rounded shadow">
+                    <h2 class="display-6 fw-bold text-primary mb-4">Chào Mừng Đến Với Website Quản Lý Sách</h2>
+                    <p class="lead text-muted">Website quản lý sách trực tuyến hiện đại và tiện lợi, giúp bạn dễ dàng tìm kiếm, lưu trữ và quản lý thông tin sách yêu thích.</p>
+                    <hr class="my-4">
+                    <div class="d-flex justify-content-between text-center">
+                        <div>
+                            <h3 class="display-6 text-primary"><i class="fas fa-book"></i></h3>
+                            <h5>10,000+</h5>
+                            <p class="text-muted">Đầu Sách</p>
+                        </div>
+                        <div>
+                            <h3 class="display-6 text-success"><i class="fas fa-users"></i></h3>
+                            <h5>5,000+</h5>
+                            <p class="text-muted">Người Dùng</p>
+                        </div>
+                        <div>
+                            <h3 class="display-6 text-danger"><i class="fas fa-download"></i></h3>
+                            <h5>25,000+</h5>
+                            <p class="text-muted">Lượt Tải</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Tính Năng Nổi Bật</h2>
+            <p class="lead text-muted">Tận hưởng những tính năng tuyệt vời từ hệ thống quản lý sách của chúng tôi</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary text-white rounded-circle mb-4">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Tìm Kiếm Thông Minh</h4>
+                        <p class="text-muted">Dễ dàng tìm kiếm sách theo tên, tác giả, thể loại hoặc từ khóa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-success text-white rounded-circle mb-4">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <h4>Cập Nhật Liên Tục</h4>
+                        <p class="text-muted">Thông tin sách được cập nhật liên tục với những đầu sách mới nhất.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-danger text-white rounded-circle mb-4">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Truy Cập Mọi Thiết Bị</h4>
+                        <p class="text-muted">Giao diện phản hồi nhanh, tương thích với mọi kích thước màn hình.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Books Section -->
+<section id="featured-books" class="featured-books py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Sách Nổi Bật</h2>
+            <p class="lead text-muted">Khám phá những cuốn sách được yêu thích nhất</p>
+        </div>
+        <div class="row g-4">
+            <!-- Book 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 book-card shadow-sm">
+                    <div class="book-image">
+                        <img src="https://i.pinimg.com/736x/13/71/10/13711004688e02a28e7ed893455c429a.jpg" class="card-img-top" alt="Book Cover">
+                        <div class="book-overlay">
+                            <a href="#" class="btn btn-sm btn-primary">Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Đắc Nhân Tâm</h5>
+                        <p class="text-muted">Dale Carnegie</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-warning px-3 py-2">Bestseller</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Book 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 book-card shadow-sm">
+                    <div class="book-image">
+                        <img src="https://i.pinimg.com/736x/2f/af/af/2fafaf7d4e2b37971cd101a93029f903.jpg" class="card-img-top" alt="Book Cover">
+                        <div class="book-overlay">
+                            <a href="#" class="btn btn-sm btn-primary">Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Nhà Giả Kim</h5>
+                        <p class="text-muted">Paulo Coelho</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-info px-3 py-2">Phổ Biến</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Book 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 book-card shadow-sm">
+                    <div class="book-image">
+                        <img src="https://i.pinimg.com/736x/af/5d/c4/af5dc4622a91f8675a3ba38e62db5b78.jpg" class="card-img-top" alt="Book Cover">
+                        <div class="book-overlay">
+                            <a href="#" class="btn btn-sm btn-primary">Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Điểm Đến Của Cuộc Đời</h5>
+                        <p class="text-muted">Nguyễn Phong</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-success px-3 py-2">Mới</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Book 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 book-card shadow-sm">
+                    <div class="book-image">
+                        <img src="https://i.pinimg.com/736x/18/cb/86/18cb8656a588a3c00ca27d4c44ae9e32.jpg" class="card-img-top" alt="Book Cover">
+                        <div class="book-overlay">
+                            <a href="#" class="btn btn-sm btn-primary">Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tuổi Trẻ Đáng Giá Bao Nhiêu</h5>
+                        <p class="text-muted">Rosie Nguyễn</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-primary px-3 py-2">Bán Chạy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a asp-controller="Books" asp-action="ListBooks" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-list me-2"></i>Xem Tất Cả Sách
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Danh Mục Sách</h2>
+            <p class="lead text-muted">Khám phá các thể loại sách phong phú</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="category-card bg-primary text-white rounded p-4 shadow h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>Kinh Tế</h3>
+                        <i class="fas fa-chart-line fa-2x"></i>
+                    </div>
+                    <p>Sách về kinh doanh, tài chính, đầu tư và phát triển cá nhân.</p>
+                    <a href="#" class="btn btn-light mt-2">Khám Phá</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="category-card bg-success text-white rounded p-4 shadow h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>Văn Học</h3>
+                        <i class="fas fa-feather-alt fa-2x"></i>
+                    </div>
+                    <p>Truyện ngắn, tiểu thuyết, thơ ca và các tác phẩm văn học nổi tiếng.</p>
+                    <a href="#" class="btn btn-light mt-2">Khám Phá</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="category-card bg-danger text-white rounded p-4 shadow h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>Khoa Học</h3>
+                        <i class="fas fa-atom fa-2x"></i>
+                    </div>
+                    <p>Sách về vũ trụ, sinh học, vật lý và các khám phá khoa học.</p>
+                    <a href="#" class="btn btn-light mt-2">Khám Phá</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="category-card bg-warning text-dark rounded p-4 shadow h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>Tâm Lý</h3>
+                        <i class="fas fa-brain fa-2x"></i>
+                    </div>
+                    <p>Sách về tâm lý học, phát triển bản thân và kỹ năng sống.</p>
+                    <a href="#" class="btn btn-dark mt-2">Khám Phá</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="category-card bg-info text-white rounded p-4 shadow h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>Công Nghệ</h3>
+                        <i class="fas fa-laptop-code fa-2x"></i>
+                    </div>
+                    <p>Sách về IT, lập trình, AI và các công nghệ mới nhất.</p>
+                    <a href="#" class="btn btn-light mt-2">Khám Phá</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="category-card bg-secondary text-white rounded p-4 shadow h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>Sách Trẻ Em</h3>
+                        <i class="fas fa-child fa-2x"></i>
+                    </div>
+                    <p>Truyện tranh, sách giáo dục và phát triển kỹ năng cho trẻ.</p>
+                    <a href="#" class="btn btn-light mt-2">Khám Phá</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Phản Hồi Từ Độc Giả</h2>
+            <p class="lead text-muted">Những gì mọi người nói về hệ thống quản lý sách của chúng tôi</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-item text-center p-4">
+                                <img src="https://i.pinimg.com/736x/d3/c7/61/d3c7614a018455993ae8940e536a5d9f.jpg" class="rounded-circle mb-3 shadow" alt="User" width="80">
+                                <h5>Nguyễn Văn An</h5>
+                                <p><small class="text-muted">Giáo viên</small></p>
+                                <div class="testimonial-content">
+                                    <p class="fst-italic">"Hệ thống quản lý sách này thật sự giúp tôi tiết kiệm rất nhiều thời gian trong việc tìm kiếm và quản lý tài liệu giảng dạy. Giao diện đẹp và dễ sử dụng!"</p>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-item text-center p-4">
+                                <img src="https://i.pinimg.com/736x/ec/28/ce/ec28ce0e031d01d2874dd08c6b1a760c.jpg" class="rounded-circle mb-3 shadow" alt="User" width="80">
+                                <h5>Trần Thị Minh</h5>
+                                <p><small class="text-muted">Sinh viên</small></p>
+                                <div class="testimonial-content">
+                                    <p class="fst-italic">"Website này là kho tàng kiến thức tuyệt vời cho việc học tập của tôi. Đặc biệt, tính năng tìm kiếm và lọc sách theo chủ đề rất hữu ích."</p>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-item text-center p-4">
+                                <img src="https://i.pinimg.com/736x/2d/39/15/2d3915da303eb111e5a43ff5699fdd8c.jpg" class="rounded-circle mb-3 shadow" alt="User" width="80">
+                                <h5>Phạm Văn Hoàng</h5>
+                                <p><small class="text-muted">Nhà văn</small></p>
+                                <div class="testimonial-content">
+                                    <p class="fst-italic">"Là một tác giả, tôi đánh giá cao cách hệ thống này tổ chức và hiển thị thông tin sách. Rất chuyên nghiệp và thân thiện với người dùng."</p>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-5">
+                        <div class="row">
+                            <div class="col-md-5 mb-4 mb-md-0">
+                                <h2 class="display-6 fw-bold text-primary mb-4">Liên Hệ Với Chúng Tôi</h2>
+                                <p class="text-muted">Hãy để lại thông tin liên hệ, chúng tôi sẽ phản hồi sớm nhất có thể.</p>
+                                <div class="contact-info mt-4">
+                                    <div class="d-flex mb-3">
+                                        <div class="contact-icon text-primary">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5>Địa Chỉ</h5>
+                                            <p class="text-muted">123 Đường Nguyễn Huệ, Quận 1, TP. HCM</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-3">
+                                        <div class="contact-icon text-primary">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5>Email</h5>
+                                            <p class="text-muted">contact@bookmanagement.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-3">
+                                        <div class="contact-icon text-primary">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5>Điện Thoại</h5>
+                                            <p class="text-muted">(+84) 123 456 789</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="social-links mt-4">
+                                    <a href="#" class="btn btn-outline-primary rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="btn btn-outline-primary rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn btn-outline-primary rounded-circle me-2"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="btn btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <form class="contact-form">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingName" placeholder="Họ tên">
+                                                <label for="floatingName">Họ tên</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" id="floatingEmail" placeholder="Email">
+                                                <label for="floatingEmail">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingSubject" placeholder="Tiêu đề">
+                                                <label for="floatingSubject">Tiêu đề</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" id="floatingMessage" placeholder="Nội dung" style="height: 150px"></textarea>
+                                                <label for="floatingMessage">Nội dung</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">
+                                                <i class="fas fa-paper-plane me-2"></i>Gửi Tin Nhắn
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">Đăng Ký Nhận Tin</h2>
+                <p class="mb-4">Đăng ký để nhận thông báo về sách mới và các chương trình khuyến mãi</p>
+                <form class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Địa chỉ email của bạn" aria-label="Email address">
+                        <button class="btn btn-warning" type="submit">Đăng Ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
