@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+@section Styles {
+        <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+}
+
+<main class="homepage-main">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Khám Phá Thế Giới Nghệ Thuật - Tranh Auh</h1>
+            <p>Nơi mỗi bức tranh là một câu chuyện, một cảm xúc được gửi gắm.</p>
+            <a href="#featured-collections" class="btn btn-primary btn-lg">Xem Bộ Sưu Tập</a>
+        </div>
+        <div class="hero-background">
+            <img src="~/images/bg-masthead.jpg" alt="Tranh nghệ thuật đặc sắc" />
+        </div>
+    </section>
+
+    <section id="featured-collections" class="featured-artworks-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Tác Phẩm Nổi Bật</h2>
+            <div class="artwork-grid">
+                <div class="artwork-item">
+                    <a href="/Product">
+                        <img src="~/images/abstract_11.jpg" alt="Tên tác phẩm 1" class="artwork-img">
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Hoàng Hôn Trên Biển</h3>
+                            <p class="artwork-artist">Nghệ sĩ: Văn Cao</p>
+                            <p class="artwork-price">15.000.000 VNĐ</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="artwork-item">
+                    <a href="/Product/Details/2">
+                        <img src="~/images/abstract_3.jpg" alt="Tên tác phẩm 2" class="artwork-img">
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Phố Cổ Hà Nội</h3>
+                            <p class="artwork-artist">Nghệ sĩ: Bùi Xuân Phái</p>
+                            <p class="artwork-price">25.000.000 VNĐ</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="artwork-item">
+                    <a href="/Product/Details/3">
+                        <img src="~/images/abstract_7.jpg" alt="Tên tác phẩm 3" class="artwork-img">
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Thiếu Nữ Bên Hoa Huệ</h3>
+                            <p class="artwork-artist">Nghệ sĩ: Tô Ngọc Vân</p>
+                            <p class="artwork-price">30.000.000 VNĐ</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="artwork-item">
+                    <a href="/Product/Details/4">
+                        <img src="~/images/abstract_8.jpg" alt="Tên tác phẩm 4" class="artwork-img">
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Trừu Tượng Số 5</h3>
+                            <p class="artwork-artist">Nghệ sĩ: Lê Phổ</p>
+                            <p class="artwork-price">18.500.000 VNĐ</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="/Product" class="btn btn-secondary">Xem Tất Cả Tranh</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="art-categories-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Khám Phá Theo Danh Mục</h2>
+            <div class="categories-grid">
+                <a href="/Products?category=son-dau" class="category-item">
+                    <img src="~/images/abstract_10.jpg" alt="Tranh Sơn Dầu">
+                    <div class="category-name">Tranh Sơn Dầu</div>
+                </a>
+                <a href="/Products?category=mau-nuoc" class="category-item">
+                    <img src="~/images/abstract_9.jpg" alt="Tranh Màu Nước">
+                    <div class="category-name">Tranh Màu Nước</div>
+                </a>
+                <a href="/Products?category=truu-tuong" class="category-item">
+                    <img src="~/images/abstract_5.jpg" alt="Tranh Trừu Tượng">
+                    <div class="category-name">Tranh Trừu Tượng</div>
+                </a>
+                <a href="/Products?category=phong-canh" class="category-item">
+                    <img src="~/images/abstract_2.jpg" alt="Tranh Phong Cảnh">
+                    <div class="category-name">Tranh Phong Cảnh</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-auh-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="~/images/bg-masthead.jpg" alt="Về Tranh Auh Shop" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title-sub">Chào Mừng Đến Với Tranh Auh</h2>
+                    <p>Tại Tranh Auh, chúng tôi tin rằng nghệ thuật là một phần không thể thiếu của cuộc sống, mang lại vẻ đẹp, cảm hứng và những giá trị tinh thần sâu sắc. Chúng tôi tự hào mang đến những tác phẩm tranh độc đáo, chất lượng từ các họa sĩ tài năng, giúp không gian sống và làm việc của bạn trở nên tinh tế và ý nghĩa hơn.</p>
+                    <p>Hãy cùng Tranh Auh khám phá và lựa chọn những tác phẩm nghệ thuật làm phong phú thêm tâm hồn bạn.</p>
+                    <a href="/AboutUs" class="btn btn-outline-primary">Tìm Hiểu Thêm</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>

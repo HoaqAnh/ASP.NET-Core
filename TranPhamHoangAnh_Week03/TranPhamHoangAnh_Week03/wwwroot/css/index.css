@@ -1,0 +1,410 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap');
+
+:root {
+    --primary: #3a5199;
+    --primary-light: #4c69c7;
+    --primary-dark: #2b3d73;
+    --accent: #e8aa33;
+    --accent-light: #ffbe45;
+    --background: #f5f7fa;
+    --surface: #ffffff;
+    --text-primary: #212b36;
+    --text-secondary: #637381;
+    --border: #e0e5eb;
+    --shadow-sm: 0 2px 8px rgba(33, 43, 54, 0.08);
+    --shadow-md: 0 4px 16px rgba(33, 43, 54, 0.12);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.homepage-main {
+    padding: 0;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+}
+
+.section-title-sub {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: 1px solid #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+    border-color: #545b62;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border: 1px solid #007bff;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: .25rem;
+}
+
+/* Hero Section */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Featured Artworks Section */
+.featured-artworks-section .artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.artwork-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.artwork-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.artwork-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.artwork-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.artwork-info {
+    padding: 20px;
+}
+
+.artwork-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.artwork-artist {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.artwork-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Art Categories Section */
+.art-categories-section .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.category-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.category-item:hover img {
+    filter: brightness(0.6);
+}
+
+.category-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.category-item:hover .category-name {
+    background-color: rgba(0, 123, 255, 0.8);
+}
+
+/* About Auh Shop Section */
+.about-auh-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.about-auh-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-auh-section .col-md-6 {
+    width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .featured-artworks-section .artwork-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .about-auh-section .col-md-6 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-auh-section .col-md-6:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .section-title-sub {
+        font-size: 1.7rem;
+    }
+
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .artwork-title {
+        font-size: 1.2rem;
+    }
+
+    .artwork-price {
+        font-size: 1rem;
+    }
+
+    .art-categories-section .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .category-name {
+        font-size: 1.1rem;
+    }
+
+    .about-auh-section .col-md-6 {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .featured-artworks-section .artwork-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .art-categories-section .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .artwork-img {
+        height: 200px;
+    }
+
+    .category-item img {
+        height: 150px;
+    }
+}
