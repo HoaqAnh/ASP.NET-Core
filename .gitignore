@@ -17,6 +17,7 @@ dist-ssr
 .env
 TranPhamHoangAnh_Week03/.vs/*
 TranPhamHoangAnh_Week02/.vs/*
+TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/appsettings.json
 appsettings.json
 !.vscode/extensions.json
 .idea
