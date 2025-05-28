@@ -22,8 +22,11 @@ namespace TranPhamHoangAnh_Week03.Models
         [Range(0, int.MaxValue, ErrorMessage = "Số lượng phải là một số không âm")]
         public int Quantity { get; set; }
 
-        [StringLength(500, ErrorMessage = "Đường dẫn hình ảnh không được vượt quá 500 ký tự")]
+        [Column(TypeName = "TEXT")]
         public string? ImageUrl { get; set; }
+
+        [Column(TypeName = "TEXT")]
+        public string? ImagePublicId { get; set; }
 
         public int? CategoryId { get; set; }
 
@@ -32,13 +35,14 @@ namespace TranPhamHoangAnh_Week03.Models
 
         public Product() { }
 
-        public Product(string name, string? description, decimal price, int quantity, string? imageUrl, int? categoryId)
+        public Product(string name, string? description, decimal price, int quantity, string? imageUrl, string? imagePublicId, int? categoryId)
         {
             Name = name;
             Description = description;
             Price = price;
             Quantity = quantity;
             ImageUrl = imageUrl;
+            ImagePublicId = imagePublicId;
             CategoryId = categoryId;
         }
     }

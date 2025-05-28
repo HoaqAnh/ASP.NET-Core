@@ -119,8 +119,10 @@
             </button>
         </div>
         <div class="modal-body">
-            <form id="productForm">
+            <form id="productForm" enctype="multipart/form-data">
                 <input type="hidden" id="productId" value="" />
+                <input type="hidden" id="currentImageUrl" />
+                <input type="hidden" id="currentImagePublicId" />
 
                 <div class="form-group">
                     <label for="productName">Tên sản phẩm</label>
@@ -129,7 +131,7 @@
 
                 <div class="form-group">
                     <label for="productPrice">Giá (đ)</label>
-                    <input type="number" id="productPrice" name="Price" step="any" min="0" required /> @* Thêm step="any" cho giá thập phân *@
+                    <input type="number" id="productPrice" name="Price" step="any" min="0" required />
                 </div>
                 <div class="form-group">
                     <label for="productQuantity">Số lượng</label>
@@ -137,7 +139,7 @@
                 </div>
                 <div class="form-group">
                     <label for="productCategory">Danh mục</label>
-                    <select id="productCategory" name="CategoryId"> @* Đổi name thành CategoryId *@
+                    <select id="productCategory" name="CategoryId">
                         <option value="">Chọn danh mục</option>
                         @if (categoriesList != null)
                         {
@@ -155,8 +157,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="productImage">Hình ảnh URL</label>
-                    <input type="text" id="productImage" name="ImageUrl" />
+                    <label for="productImageFile">Hình ảnh sản phẩm</label>
+                    <input type="file" id="productImageFile" name="ImageFile" accept="image/*" class="form-control" />
+                    <small class="form-text text-muted">Chọn file ảnh mới để thay thế ảnh hiện tại (nếu có).</small>
+                    <div id="imagePreviewContainer" style="margin-top: 10px;">
+                        <img id="imagePreview" src="#" alt="Xem trước ảnh" style="max-width: 200px; max-height: 200px; display: none;" />
+                        <span id="currentImageText" style="display:none; word-break:break-all;"></span>
+                        <button type="button" id="btnClearImage" class="btn btn-sm btn-warning" style="display:none; margin-top:5px;">Xóa ảnh hiện tại</button>
+                    </div>
                 </div>
 
                 <div class="form-actions">

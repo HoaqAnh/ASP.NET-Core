@@ -216,6 +216,7 @@ main {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
     min-height: 100vh;
+    padding: 20px 0;
 }
 
 /* ===== FOOTER ===== */
