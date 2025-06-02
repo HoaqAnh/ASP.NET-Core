@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\User\Data\ASP.NET-Core\TranPhamHoangAnh_Week03\TranPhamHoangAnh_Week03
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/User/Data/ASP.NET-Core/TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/User/Data/ASP.NET-Core/TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/User/Data/ASP.NET-Core/TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +40,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/User/Data/ASP.NET-Core/TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/User/Data/ASP.NET-Core/TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/Views/Product/ProductListUserView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0TGlzdFVzZXJWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/User/Data/ASP.NET-Core/TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/Views/Shared/_LayoutGuest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRHdWVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/User/Data/ASP.NET-Core/TranPhamHoangAnh_Week03/TranPhamHoangAnh_Week03/Views/Shared/_ValidationScriptsPartial.cshtml]

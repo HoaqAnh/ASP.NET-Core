@@ -226,3 +226,5 @@ A:\User\Data\Lab\ASP.NET-Core\TranPhamHoangAnh_Week03\TranPhamHoangAnh_Week03\ob
 A:\User\Data\Lab\ASP.NET-Core\TranPhamHoangAnh_Week03\TranPhamHoangAnh_Week03\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 A:\User\Data\Lab\ASP.NET-Core\TranPhamHoangAnh_Week03\TranPhamHoangAnh_Week03\bin\Debug\net8.0\CloudinaryDotNet.dll
 A:\User\Data\Lab\ASP.NET-Core\TranPhamHoangAnh_Week03\TranPhamHoangAnh_Week03\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\User\Data\ASP.NET-Core\TranPhamHoangAnh_Week03\TranPhamHoangAnh_Week03\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\User\Data\ASP.NET-Core\TranPhamHoangAnh_Week03\TranPhamHoangAnh_Week03\bin\Debug\net8.0\Newtonsoft.Json.dll

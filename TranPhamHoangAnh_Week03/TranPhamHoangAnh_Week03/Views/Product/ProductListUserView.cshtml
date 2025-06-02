@@ -1,0 +1,106 @@
+﻿@model List<TranPhamHoangAnh_Week03.Models.Product>
+@{
+    ViewData["Title"] = "Sản phẩm";
+    var categoriesList = ViewBag.Categories as List<TranPhamHoangAnh_Week03.Models.Category>;
+}
+
+@section Styles {
+        <link rel="stylesheet" href="~/css/product.css" asp-append-version="true" />
+        <style>
+            .product-header-user h1 {
+                font-size: 2rem;
+                color: var(--primary-dark);
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+            .product-card-user .product-actions {
+                display: none;
+            }
+            .product-card-user {
+                border: 1px solid #e9ecef;
+            }
+            .product-card-user:hover {
+                box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            }
+        </style>
+}
+
+<div class="product-container">
+    <div class="product-header-user">
+        <h1>Tranh Nghệ Thuật Tuyển Chọn</h1>
+    </div>
+
+    <div class="product-tools">
+        <div class="search-filter">
+            <div class="search-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/>
+                </svg>
+                <input type="text" id="searchProductUserList" placeholder="Tìm kiếm tranh..."/>
+            </div>
+            <div class="filter-controls">
+                <select id="categoryFilterUserList" class="form-control">
+                    <option value="">Tất cả danh mục</option>
+                    @foreach (var category in categoriesList)
+                    {
+                            <option value="@category.Name">@category.Name</option>
+                    }
+                </select>
+                <select id="sortOrderUserList" class="form-control">
+                    <option value="newest">Mới nhất</option>
+                    <option value="price-asc">Giá: Thấp đến cao</option>
+                    <option value="price-desc">Giá: Cao đến thấp</option>
+                    <option value="name-asc">Tên: A-Z</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-grid" id="productGridUserList">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var product in Model)
+            {
+                        <div class="product-card product-card-user">
+                            <div class="product-image">
+                                <img src="@(string.IsNullOrEmpty(product.ImageUrl) ? "/images/placeholder.jpg" : product.ImageUrl)" alt="@product.Name" loading="lazy"/>
+                            </div>
+                            <div class="product-info">
+                                <h3>@product.Name</h3>
+                                <p class="product-price">@product.Price.ToString("N0") đ</p>
+                                <p class="product-category">@(product.Category?.Name ?? "N/A")</p>
+                        @* Có thể thêm link xem chi tiết nếu có trang chi tiết *@
+                        @* <a href="@Url.Action("Details", "ProductPage", new { id = product.Id })" class="btn btn-sm btn-outline-primary mt-2">Xem chi tiết</a> *@
+                            </div>
+                        </div>
+            }
+        }
+        else
+        {
+                <div class="empty-state" id="emptyStateUserList" style="grid-column: 1 / -1; display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M11 9h2V7h-2zm1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18C6.48 4 2 8.48 2 14s4.48 10 10 10s10-4.48 10-10S17.52 4 12 4m0 11c-1.1 0-2-.9-2-2v-2c0-1.1.9-2 2-2s2 .9 2 2v2c0 1.1-.9 2-2 2"/>
+                    </svg>
+                    <p>Không tìm thấy sản phẩm nào.</p>
+                </div>
+        }
+    </div>
+
+    <div class="pagination" id="paginationUserList" style="display: none;">
+        <button class="pagination-prev" id="prevPageUserList">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="pagination-numbers" id="paginationNumbersUserList"></div>
+        <button class="pagination-next" id="nextPageUserList">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+@section Scripts {
+        <script src="~/js/productListUser.js" asp-append-version="true"></script>
+}
