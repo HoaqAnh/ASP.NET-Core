@@ -1,5 +1,4 @@
-﻿// File: Controllers/ProductController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TranPhamHoangAnh_Week03.Data;
 using TranPhamHoangAnh_Week03.Models;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +30,19 @@ namespace TranPhamHoangAnh_Week03.Controllers
             ViewBag.Categories = categories;
 
             return View(initialProducts);
+        }
+
+        public async Task<IActionResult> ProductListUserView()
+        {
+            var categories = await _context.Categories.OrderBy(c => c.Name).ToListAsync();
+            ViewBag.Categories = categories;
+
+            var initialProductsForUser = await _context.Products
+                                                .Include(p => p.Category)
+                                                .OrderByDescending(p => p.Id)
+                                                .Take(12)
+                                                .ToListAsync();
+            return View("ProductListUserView", initialProductsForUser);
         }
     }
 }

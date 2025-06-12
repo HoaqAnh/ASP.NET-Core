@@ -1,0 +1,263 @@
+.main-layout,
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+header {
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: var(--background);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-logo {
+  flex: 0 0 auto;
+}
+
+.nav-menus {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.25rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--foreground);
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.logo:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.logo span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Navigation Menu Styles */
+.nav-menus ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.nav-menus li {
+  margin: 0;
+}
+
+.nav-menus button {
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menus button:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-realistic);
+}
+
+.nav-menus button:active {
+  transform: translateY(0);
+}
+
+.admin-layout .nav-menus button {
+  border: 1px solid transparent;
+}
+
+.admin-layout .nav-menus button:hover {
+  border-color: var(--primary);
+  background-color: rgba(55, 255, 139, 0.1);
+}
+
+.nav-actions p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--foreground);
+  padding: 0.5rem 1rem;
+  background-color: var(--card);
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-realistic);
+}
+
+.admin-layout {
+  background: linear-gradient(135deg, var(--background) 0%, var(--card) 100%);
+}
+
+.admin-layout header {
+  background: linear-gradient(90deg, var(--card) 0%, rgba(55, 255, 139, 0.05) 100%);
+  border-bottom: 2px solid var(--primary);
+}
+
+.admin-layout .logo {
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.admin-layout .logo:hover {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(55, 255, 139, 0.3);
+}
+
+.admin-layout .nav-actions p {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.logout-btn:hover {
+  color: brown;
+  font-weight: 500;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .nav-logo,
+  .nav-menus,
+  .nav-actions {
+    flex: none;
+    width: 100%;
+  }
+  
+  .nav-menus {
+    justify-content: center;
+  }
+  
+  .nav-menus ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  
+  .nav-menus button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menus ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-menus button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 1rem;
+  }
+}
+
+.nav-menus button {
+  position: relative;
+}
+
+.nav-menus button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.nav-menus button:hover::before {
+  left: 100%;
+}
+
+.logo:focus,
+.nav-menus button:focus,
+.nav-actions button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@media print {
+  header {
+    display: none;
+  }
+  
+  .container {
+    padding: 0;
+  }
+}

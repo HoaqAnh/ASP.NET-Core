@@ -24,8 +24,6 @@ namespace TranPhamHoangAnh_Week03.Controllers
                                                   .OrderBy(c => c.Name)
                                                   .ToListAsync();
             return View(initialCategories);
-            // Hoặc nếu muốn JS tự fetch hoàn toàn:
-            // return View(new List<Category>());
         }
     }
 }

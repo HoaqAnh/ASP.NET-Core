@@ -1,0 +1,186 @@
+/* --- Page Container --- */
+.mq-container {
+  padding: 2rem;
+  background-color: #f7f8fa;
+  height: 100%;
+  width: 100%;
+}
+
+/* --- Page Header --- */
+.mq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mq-header__title {
+  font-size: 2.25rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* --- Loading and Error States --- */
+.mq-loading,
+.mq-error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.mq-error {
+  color: #dc2626;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+}
+
+/* --- Table Styling --- */
+.mq-table-wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Giúp bo góc table bên trong */
+}
+
+.mq-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mq-table__head {
+  background-color: #f9fafb;
+}
+
+.mq-table__cell {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mq-table__cell--header {
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+}
+
+.mq-table__row:last-child .mq-table__cell {
+  border-bottom: none;
+}
+
+.mq-table__row:hover {
+  background-color: #f9fafb;
+}
+
+.mq-table__cell--actions {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem; /* Thay thế cho margin-left */
+}
+
+/* --- Action Buttons in Table --- */
+.mq-actions__button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mq-actions__button--edit {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.mq-actions__button--edit:hover {
+  background-color: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.mq-actions__button--delete {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.mq-actions__button--delete:hover {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+}
+
+/*
+ * --- Modal Styling (cho react-modal) ---
+ * Chúng ta sẽ dùng các class name này trong props của component Modal
+ */
+
+.quiz-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17, 24, 39, 0.7); /* Màu nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.quiz-modal-content {
+  position: relative;
+  background: #ffffff;
+  padding: 20px; /* Padding sẽ được component QuizForm quản lý */
+  border-radius: 12px;
+  outline: none;
+  z-index: 1001;
+  width: 90%;
+  max-width: 800px; /* Giới hạn chiều rộng của modal */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Nút đóng modal */
+.quiz-modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #9ca3af;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.quiz-modal-close-btn:hover {
+  color: #1f2937;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

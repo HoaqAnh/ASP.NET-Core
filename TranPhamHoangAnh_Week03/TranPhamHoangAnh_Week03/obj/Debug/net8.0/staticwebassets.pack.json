@@ -81,8 +81,24 @@
       "PackagePath": "staticwebassets\\images\\abstract_9.jpg"
     },
     {
+      "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\images\\banner.png",
+      "PackagePath": "staticwebassets\\images\\banner.png"
+    },
+    {
       "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\images\\bg-masthead.jpg",
       "PackagePath": "staticwebassets\\images\\bg-masthead.jpg"
+    },
+    {
+      "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\images\\goose_wallpaper.jpg",
+      "PackagePath": "staticwebassets\\images\\goose_wallpaper.jpg"
+    },
+    {
+      "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\js\\authLogin.js",
+      "PackagePath": "staticwebassets\\js\\authLogin.js"
+    },
+    {
+      "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\js\\authRegister.js",
+      "PackagePath": "staticwebassets\\js\\authRegister.js"
     },
     {
       "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\js\\category.js",
@@ -91,6 +107,10 @@
     {
       "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
+    },
+    {
+      "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\js\\productListUser.js",
+      "PackagePath": "staticwebassets\\js\\productListUser.js"
     },
     {
       "Id": "D:\\User\\Data\\ASP.NET-Core\\TranPhamHoangAnh_Week03\\TranPhamHoangAnh_Week03\\wwwroot\\js\\site.js",

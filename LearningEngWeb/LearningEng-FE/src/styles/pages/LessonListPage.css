@@ -1,0 +1,21 @@
+.lesson-list-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.lesson-list-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.lesson-list-page > p {
+  margin-bottom: 2rem;
+  color: #4b5563;
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}

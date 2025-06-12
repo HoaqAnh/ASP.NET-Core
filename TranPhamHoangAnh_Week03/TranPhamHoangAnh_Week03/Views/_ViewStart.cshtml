@@ -1,3 +1,25 @@
 ﻿@{
-    Layout = "_Layout";
+    if (User.Identity != null && User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            Layout = "_LayoutAdmin";
+        }
+        else if (User.IsInRole("Employee"))
+        {
+            Layout = "_LayoutEmployee";
+        }
+        else if (User.IsInRole("Customer"))
+        {
+            Layout = "_LayoutCustomer";
+        }
+        else
+        {
+            Layout = "_LayoutCustomer";
+        }
+    }
+    else
+    {
+        Layout = "_LayoutGuest";
+    }
 }

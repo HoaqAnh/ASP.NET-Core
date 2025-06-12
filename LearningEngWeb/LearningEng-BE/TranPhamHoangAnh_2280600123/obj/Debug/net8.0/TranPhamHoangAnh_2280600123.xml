@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TranPhamHoangAnh_2280600123</name>
+    </assembly>
+    <members>
+        <member name="M:TranPhamHoangAnh_2280600123.Controllers.AuthController.Register(TranPhamHoangAnh_2280600123.DTOs.RegisterDto)">
+            <summary>
+            Đăng ký tài khoản người dùng mới.
+            </summary>
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Controllers.AuthController.Login(TranPhamHoangAnh_2280600123.DTOs.LoginDto)">
+            <summary>
+            Đăng nhập.
+            </summary>
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Controllers.UserManagementController.GetStudents">
+            <summary>
+            Lấy danh sách tất cả tài khoản có vai trò là Student.
+            </summary>
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Controllers.UserManagementController.ToggleStudentStatus(System.Guid)">
+            <summary>
+            Kích hoạt (Enable) hoặc Vô hiệu hóa (Disable) một tài khoản Student.
+            </summary>
+            <param name="id">ID của tài khoản Student</param>
+        </member>
+        <member name="T:TranPhamHoangAnh_2280600123.Migrations.initial">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TranPhamHoangAnh_2280600123.Migrations.AddHistoryQuizIdToHistoryQuestion">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.AddHistoryQuizIdToHistoryQuestion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.AddHistoryQuizIdToHistoryQuestion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.AddHistoryQuizIdToHistoryQuestion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TranPhamHoangAnh_2280600123.Migrations.UpdateDatabase">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.UpdateDatabase.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.UpdateDatabase.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Migrations.UpdateDatabase.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TranPhamHoangAnh_2280600123.Services.IEmailService">
+            <summary>
+            Định nghĩa hợp đồng cho một dịch vụ gửi email.
+            Bất kỳ class nào triển khai interface này đều phải cung cấp một phương thức SendEmailAsync.
+            </summary>
+        </member>
+        <member name="M:TranPhamHoangAnh_2280600123.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String)">
+            <summary>
+            Gửi email một cách bất đồng bộ.
+            </summary>
+            <param name="toEmail">Địa chỉ email của người nhận.</param>
+            <param name="subject">Chủ đề của email.</param>
+            <param name="message">Nội dung của email (có thể là HTML).</param>
+            <returns>Một Task đại diện cho hoạt động gửi email.</returns>
+        </member>
+    </members>
+</doc>

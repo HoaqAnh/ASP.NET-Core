@@ -1,20 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Trang chủ";
+    ViewData["Title"] = "Trang Chủ";
 }
 
 @section Styles {
-        <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
 }
+
+@* @if (TempData["RegistrationSuccess"] != null) *@
+@* { *@
+@*     <div class="alert alert-success mt-3" role="alert"> *@
+@*         @TempData["RegistrationSuccess"] *@
+@*     </div> *@
+@* } *@
+@* @if (TempData["SuccessMessage"] != null) *@
+@* { *@
+@*     <div class="alert alert-success mt-3" role="alert"> *@
+@*         @TempData["SuccessMessage"] *@
+@*     </div> *@
+@* } *@
 
 <main class="homepage-main">
     <section class="hero-section">
-        <div class="hero-content">
-            <h1>Khám Phá Thế Giới Nghệ Thuật - Tranh Auh</h1>
-            <p>Nơi mỗi bức tranh là một câu chuyện, một cảm xúc được gửi gắm.</p>
-            <a href="#featured-collections" class="btn btn-primary btn-lg">Xem Bộ Sưu Tập</a>
-        </div>
         <div class="hero-background">
-            <img src="~/images/bg-masthead.jpg" alt="Tranh nghệ thuật đặc sắc" />
+            <img src="~/images/banner.png" alt="Tranh nghệ thuật đặc sắc" />
         </div>
     </section>
 

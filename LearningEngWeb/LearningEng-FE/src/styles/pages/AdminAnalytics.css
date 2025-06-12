@@ -1,0 +1,194 @@
+/* --- Page Container & Header (Nhất quán với các trang khác) --- */
+.aa-container {
+  padding: 2rem;
+  background-color: #f7f8fa;
+  height: 100%;
+  width: 100%;
+}
+
+.aa-header {
+  margin-bottom: 2rem;
+}
+
+.aa-header__title {
+  font-size: 2.25rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* --- Section container --- */
+.aa-section {
+  margin-bottom: 2.5rem;
+}
+
+.aa-section__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* --- Widget Styling (cho phần Hoàn thành bài học) --- */
+.aa-widget {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.aa-completions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Khoảng cách giữa các bài học */
+}
+
+.aa-completions-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aa-completions-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.aa-completions-item__title {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.aa-completions-item__percentage {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.aa-progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.aa-progress-bar__inner {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* --- Search Input --- */
+.aa-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.aa-search-input:focus {
+  outline: none;
+  border-color: #409eff;
+  box-shadow: 0 0 0 3px rgba(64, 158, 255, 0.2);
+}
+
+/* --- Accordion Styling (cho Lịch sử Quiz) --- */
+.aa-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.aa-accordion__item {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden; /* Quan trọng cho hiệu ứng slide */
+  transition: all 0.3s ease-in-out;
+}
+
+.aa-accordion__item.is-expanded {
+  border-color: #a5b4fc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.aa-accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: background-color 0.2s;
+}
+
+.aa-accordion__header:hover {
+  background-color: #f3f4f6;
+}
+
+.aa-accordion__student-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.aa-accordion__toggle-icon {
+  font-size: 1.2rem;
+  color: #6b7280;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Xoay icon khi mở */
+.aa-accordion__item.is-expanded .aa-accordion__toggle-icon {
+  transform: rotate(180deg);
+}
+
+.aa-accordion__body {
+  /* Hiệu ứng slide-down/up mượt mà */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  padding: 0 1.5rem;
+}
+
+.aa-accordion__item.is-expanded .aa-accordion__body {
+  max-height: 1000px; /* Chiều cao đủ lớn để chứa nội dung */
+  padding: 1.5rem;
+}
+
+/* --- History Table (bên trong Accordion) --- */
+.aa-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.aa-history-table th,
+.aa-history-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.aa-history-table th {
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.aa-history-table td {
+  color: #374151;
+}
+
+.aa-history-table tr:last-child td {
+  border-bottom: none;
+}

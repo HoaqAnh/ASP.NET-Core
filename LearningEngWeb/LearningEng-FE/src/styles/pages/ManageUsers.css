@@ -1,0 +1,128 @@
+/* --- Page Container (Tái sử dụng style từ các trang trước cho đồng bộ) --- */
+.mu-container {
+  padding: 2rem;
+  background-color: #f7f8fa;
+  height: 100%;
+  width: 100%;
+}
+
+/* --- Page Header --- */
+.mu-header {
+  margin-bottom: 2rem;
+}
+
+.mu-header__title {
+  font-size: 2.25rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* --- Loading and Error States --- */
+.mu-loading,
+.mu-error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.mu-error {
+  color: #dc2626;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+}
+
+/* --- Table Styling (Tương tự các trang trước) --- */
+.mu-table-wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.mu-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mu-table__head {
+  background-color: #f9fafb;
+}
+
+.mu-table__cell {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+.mu-table__cell--header {
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+}
+
+.mu-table__row:last-child .mu-table__cell {
+  border-bottom: none;
+}
+
+.mu-table__row:hover {
+  background-color: #f9fafb;
+}
+
+.mu-table__cell--center {
+  text-align: center;
+}
+
+/* --- Status Badge Styling --- */
+.mu-status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px; /* Tạo hình viên thuốc (pill) */
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.mu-status-badge--active {
+  background-color: #dcfce7; /* Nền xanh lá cây nhạt */
+  color: #166534; /* Chữ xanh lá cây đậm */
+}
+
+.mu-status-badge--disabled {
+  background-color: #fee2e2; /* Nền đỏ nhạt */
+  color: #991b1b; /* Chữ đỏ đậm */
+}
+
+/* --- Action Button Styling --- */
+.mu-action-button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Nút để KÍCH HOẠT tài khoản */
+.mu-action-button--enable {
+  background-color: #22c55e; /* Màu xanh lá cây */
+}
+.mu-action-button--enable:hover {
+  background-color: #16a34a;
+}
+
+/* Nút để VÔ HIỆU HÓA tài khoản */
+.mu-action-button--disable {
+  background-color: #ef4444; /* Màu đỏ */
+}
+.mu-action-button--disable:hover {
+  background-color: #dc2626;
+}

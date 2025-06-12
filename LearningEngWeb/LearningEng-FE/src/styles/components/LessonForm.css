@@ -1,0 +1,178 @@
+/* --- General Form Container --- */
+.lesson-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  max-height: 85vh; /* Giữ lại logic scroll */
+  overflow-y: auto; /* Giữ lại logic scroll */
+  border: 1px solid #e0e0e0;
+}
+
+/* --- Form Title --- */
+.lesson-form__title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* --- Fieldsets for Grouping --- */
+.lesson-form__fieldset {
+  border: 1px solid #dcdfe6;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.lesson-form__legend {
+  padding: 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* --- Form Group (Label + Input) --- */
+.lesson-form__group {
+  margin-bottom: 1.5rem;
+}
+
+/* --- Labels --- */
+.lesson-form__label {
+  display: block;
+  font-weight: 500;
+  color: #606266;
+  margin-bottom: 0.5rem;
+}
+
+/* --- General Input, Select, Textarea Styling --- */
+.lesson-form__input,
+.lesson-form__select,
+.lesson-form__textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #303133;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-sizing: border-box; /* Quan trọng để padding không làm vỡ layout */
+}
+
+.lesson-form__input:focus,
+.lesson-form__select:focus,
+.lesson-form__textarea:focus {
+  outline: none;
+  border-color: #409eff;
+  box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.2);
+}
+
+.lesson-form__textarea {
+  resize: vertical; /* Cho phép người dùng thay đổi chiều cao */
+  min-height: 120px;
+}
+
+/* --- File Input Styling --- */
+.lesson-form__file-input {
+  font-size: 0.95rem;
+  color: #606266;
+}
+
+.lesson-form__file-input::file-selector-button {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  background-color: #f5f7fa;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.lesson-form__file-input::file-selector-button:hover {
+  background-color: #e9ebef;
+}
+
+
+/* --- Audio Player Preview --- */
+.lesson-form__audio-preview {
+  margin-top: 1rem;
+}
+
+.lesson-form__audio-player {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+
+/* --- Error Message --- */
+.lesson-form__error {
+  color: #f56c6c;
+  background-color: #fef0f0;
+  border: 1px solid #fbc4c4;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* --- Horizontal Line --- */
+.lesson-form__divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2rem 0;
+}
+
+
+/* --- Action Buttons Container --- */
+.lesson-form__actions {
+  display: flex;
+  justify-content: flex-end; /* Căn chỉnh nút về bên phải */
+  gap: 1rem; /* Tạo khoảng cách giữa các nút */
+  margin-top: 1.5rem;
+}
+
+/* --- General Button Styling --- */
+.lesson-form__button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.lesson-form__button:active {
+    transform: translateY(1px);
+}
+
+/* --- Submit Button --- */
+.lesson-form__button--submit {
+  background-color: #409eff;
+  color: white;
+}
+
+.lesson-form__button--submit:hover {
+  background-color: #66b1ff;
+}
+
+.lesson-form__button--submit:disabled {
+  background-color: #a0cfff;
+  cursor: not-allowed;
+}
+
+
+/* --- Cancel Button --- */
+.lesson-form__button--cancel {
+  background-color: #f5f7fa;
+  color: #606266;
+  border: 1px solid #dcdfe6;
+}
+
+.lesson-form__button--cancel:hover {
+  background-color: #e9ebef;
+}

@@ -1,0 +1,85 @@
+﻿@model TranPhamHoangAnh_Week03.ViewModels.VerifyEmailViewModel
+@{
+    Layout = null; // Hoặc layout guest
+    ViewData["Title"] = "Xác Thực Email";
+    var emailForVerification = ViewBag.Email as string ?? Model?.Email;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Tranh Auh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        .field-validation-error {
+            color: #F44336;
+            font-size: 0.875em;
+            display: block;
+        }
+
+        .input-validation-error {
+            border-color: #F44336 !important;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-50 to-teal-100 min-h-screen py-8 px-4 flex justify-center items-center">
+    <div class="max-w-md mx-auto w-full">
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+            <div class="text-center mb-8">
+                <div class="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-envelope-check text-green-600 text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">Xác Thực Email</h2>
+                @if (!string.IsNullOrEmpty(ViewBag.ShowOtpMessage as string))
+                {
+                    <p class="text-sm text-green-600 bg-green-50 p-3 rounded-md mt-2">@ViewBag.ShowOtpMessage</p>
+                }
+                <p class="text-gray-600 mt-3">
+                    Một mã OTP đã được gửi đến email: <strong class="text-blue-600">@emailForVerification</strong>.
+                    Vui lòng nhập mã vào ô bên dưới.
+                </p>
+            </div>
+
+            <form asp-controller="Auth" asp-action="VerifyEmail" method="post" class="space-y-6" novalidate>
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="Email" value="@emailForVerification" />
+
+                <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm p-3 bg-red-50 rounded-md"></div>
+
+                <div>
+                    <label asp-for="OtpCode" class="block text-sm font-semibold text-gray-700 mb-2 text-center">Mã OTP (6 chữ số)</label>
+                    <div class="relative">
+                        <input asp-for="OtpCode" type="text" maxlength="6" autofocus
+                               class="w-full px-4 py-3 text-center text-xl tracking-[0.5em] border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                               placeholder="------">
+                        <i class="fas fa-key absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <span asp-validation-for="OtpCode" class="text-red-500 text-sm mt-1 block text-center"></span>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-green-500 to-teal-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        Xác Thực Mã OTP
+                    </button>
+                </div>
+
+                <div class="text-center pt-4 text-sm">
+                    <p class="text-gray-600">
+                        Không nhận được mã?
+                        <a asp-controller="Auth" asp-action="ResendOtp" asp-route-email="@emailForVerification" class="text-blue-600 hover:text-blue-700 font-semibold">
+                            Gửi lại mã OTP
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

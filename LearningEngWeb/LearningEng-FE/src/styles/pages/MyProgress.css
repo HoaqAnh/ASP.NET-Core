@@ -1,0 +1,149 @@
+/* === MyProgress.css === */
+
+/* --- Page Container & Header (Nhất quán với các trang khác) --- */
+.mp-container {
+  padding: 2rem;
+  background-color: #f7f8fa;
+  height: 100%;
+  width: 100%;
+}
+
+.mp-header {
+  margin-bottom: 2rem;
+}
+
+.mp-header__title {
+  font-size: 2.25rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* --- Section container --- */
+.mp-section {
+  margin-bottom: 2.5rem;
+}
+
+.mp-section__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Widget/Card Styling --- */
+.mp-widget {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Lesson Progress Styling --- */
+.mp-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Khoảng cách giữa các mục tiến độ */
+}
+
+.mp-progress-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.mp-progress-item__title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.mp-progress-item__title .count {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+.mp-progress-item__percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* --- Custom Progress Bar --- */
+.mp-progress-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* --- Style cho thanh nền (track) của progress bar --- */
+.mp-progress-bar::-webkit-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 5px;
+}
+.mp-progress-bar::-moz-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 5px;
+}
+
+/* --- Style cho thanh giá trị (value) của progress bar --- */
+.mp-progress-bar::-webkit-progress-value {
+  background-color: #3b82f6;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+.mp-progress-bar::-moz-progress-bar {
+  background-color: #3b82f6;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* --- Quiz History Styling --- */
+.mp-history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-history-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr; /* Chia thành 3 cột */
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s;
+}
+
+.mp-history-item:last-child {
+  border-bottom: none;
+}
+
+.mp-history-item:hover {
+  background-color: #fafafa;
+}
+
+.mp-history-item__title {
+  font-weight: 500;
+  color: #374151;
+}
+
+.mp-history-item__score {
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+}
+
+.mp-history-item__date {
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: right;
+  font-style: italic;
+}
